@@ -36,6 +36,10 @@ gem 'devise'
 # Use figaro to manage environment variables
 gem 'figaro'
 
+# For pictures upload to Amazon S3
+gem 'aws-sdk', '< 2.0'
+gem 'paperclip'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
