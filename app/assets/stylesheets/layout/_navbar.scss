@@ -4,7 +4,7 @@
 $navbar-color: black;
 $navbar-hover-color: $yellow;
 $navbar-font-family: $header-font;
-$navbar-bg: white;
+$navbar-bg: #FF5400;
 
 /* -------------------------------------
  * Box model
@@ -34,6 +34,10 @@ $navbar-profile-border-width: 2px;
 /* -------------------------------------
  * SCSS code
  * ------------------------------------- */
+.navbar{
+  margin-bottom: 0px;
+}
+
 .navbar-bootstrap-wagon {
   background: $navbar-bg;
   font-family: $navbar-font-family;
