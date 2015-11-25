@@ -23,3 +23,16 @@
   background-color : rgba(0,0,0,0.6);
   border-radius    : 3px;
 }
+
+.banner-image {
+    background      : url(image_path('billet-bg.jpg')) no-repeat center center;
+    background-size : cover;
+    position        : relative;
+    min-height      : 60vh;
+}
+
+.about-efx {
+  margin-top  : 100px;
+  color       : #FFF;
+  text-shadow : black 0.1em 0.1em 0.2em;
+}
