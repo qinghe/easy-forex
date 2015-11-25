@@ -33,6 +33,8 @@ gem "pundit"
 
 # For user authentication
 gem 'devise'
+# Facebook Connect
+gem 'omniauth-facebook'
 
 # Use figaro to manage environment variables
 gem 'figaro'
@@ -40,9 +42,6 @@ gem 'figaro'
 # For pictures upload to Amazon S3
 gem 'aws-sdk', '< 2.0'
 gem 'paperclip'
-
-# Facebook Connect
-gem 'omniauth-facebook'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
