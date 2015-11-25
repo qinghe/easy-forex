@@ -33,6 +33,9 @@ gem "pundit"
 # For user authentication
 gem 'devise'
 
+# Use figaro to manage environment variables
+gem 'figaro'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
