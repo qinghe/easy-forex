@@ -17,6 +17,8 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
 
+        <% if user_signed_in? %>
+
           <li>
             <%= link_to "#" do %>
               <i class="fa fa-envelope-o"></i> <%= t(".messages", default: "Messages") %>
@@ -46,9 +48,17 @@
             </ul>
           </li>
 
-        <li>
-          <%= link_to t(".top_call_to_action", default: "Rent your flat"), "#", class: "btn" %>
-        </li>
+        <% else %>
+
+          <li>
+            <%= link_to t(".sign_up", default: "Sign up"), new_user_registration_path %>
+          </li>
+          <li>
+            <%= link_to t(".sign_in", default: "Sign in"), new_user_session_path %>
+          </li>
+
+        <% end %>
+
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

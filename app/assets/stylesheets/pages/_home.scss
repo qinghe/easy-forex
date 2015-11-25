@@ -2,3 +2,15 @@
  * SASS code SPECIFIC TO your home page
  * (margin/padding adjustments, background image, etc..)
  * ------------------------------------- */
+ .bg-image {
+    background      : url(image_path('efx-bg.jpg')) no-repeat center center fixed;
+    background-size : cover;
+    position        : relative;
+    min-height      : 90vh;
+}
+
+.intro-text {
+  margin-top  : 200px;
+  color       : #ffffff;
+  text-shadow : black 0.1em 0.1em 0.2em;
+}
