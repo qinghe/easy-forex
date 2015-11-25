@@ -5,4 +5,7 @@ Rails.application.routes.draw do
 
   resources :exchanges, only: [:index, :show]
 
+  resources :users, only: [] do
+    resources :reviews, only: [:new, :create]
+
 end
