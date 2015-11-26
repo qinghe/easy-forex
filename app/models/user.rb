@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
 
   has_many :exchanges,  foreign_key: 'user_id',  dependent: :destroy
 
+  has_many :reviews,  through: :exchanges
+
   has_attached_file :picture,
     styles: { medium: "300x300>", thumb: "100x100>" }
 
