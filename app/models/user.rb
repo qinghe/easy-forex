@@ -9,6 +9,8 @@ class User < ActiveRecord::Base
 
   has_many :reviews,  through: :exchanges
 
+  validates_presence_of :first_name, :last_name
+
   has_attached_file :picture,
     styles: { medium: "300x300>", thumb: "100x100>" }
 
