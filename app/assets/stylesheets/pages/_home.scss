@@ -25,10 +25,12 @@
 }
 
 .banner-image {
-    background      : url(image_path('billet-bg.jpg')) no-repeat center center;
-    background-size : cover;
-    position        : relative;
-    min-height      : 60vh;
+    background-image    : image-url('billet-bg.jpg');
+    background-repeat   : no-repeat;
+    background-position : center;
+    background-size     : cover;
+    position            : relative;
+    min-height          : 60vh;
 }
 
 .about-efx {
