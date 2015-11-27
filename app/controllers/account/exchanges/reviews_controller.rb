@@ -1,6 +1,6 @@
 module Account
   module Exchanges
-    class ReviewsController < Account::Base
+    class ReviewsController < ApplicationController
       before_action :find_exchange, only: [ :new, :create ]
 
       def new

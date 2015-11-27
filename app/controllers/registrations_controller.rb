@@ -1,7 +1,12 @@
 class RegistrationsController < Devise::RegistrationsController
 
-  def create
+  def new
+    @registration = Registration.new
+  end
 
+  def create
+    @registration = Registration.new(params[:registration])
+    @registration.save
     redirect_to account_exchanges_path
   end
 
