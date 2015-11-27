@@ -1,6 +1,5 @@
 module Account
-  class ExchangesController < ApplicationController
-    before_action :authenticate_user!
+  class ExchangesController < Account::Base
 
     def index
       @exchanges  = Exchange.all

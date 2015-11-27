@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     resources :reviews, only: [:new, :create]
   end
   namespace :account do
-    resources :exchanges, only: [] do
+    resources :bookings, only: [] do
       resource :reviews, only: [:new, :create], controller: "exchanges/reviews"
     end
 
