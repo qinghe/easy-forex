@@ -12,6 +12,7 @@ module Account
         @review = @exchange.reviews.build(review_params)
         @review.save
       end
+
       private
 
       def review_params
