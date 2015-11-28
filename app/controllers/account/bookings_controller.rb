@@ -1,5 +1,5 @@
 module Account
-  class bookingsController < Account::Base
+  class BookingsController < Account::Base
 
     def index
       @bookings = current_user.bookings.all
