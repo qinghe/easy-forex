@@ -9,10 +9,11 @@ Rails.application.routes.draw do
   end
   namespace :account do
     resources :bookings, only: [] do
-      resource :reviews, only: [:new, :create], controller: "exchanges/reviews"
+      resource :reviews, only: [:new, :create], controller: "bookings/reviews"
     end
 
     resources :exchanges, only: [:index, :show, :new, :create, :edit, :update, :destroy]
+    resources :profile, only: [:edit, :update], controller: "profile"
   end
 
 end
