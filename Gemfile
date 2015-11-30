@@ -46,6 +46,8 @@ gem 'paperclip'
 # Rails engine for static pages
 gem 'high_voltage', '~> 2.4.0'
 
+# Enumerated attributes with I18n
+gem 'enumerize'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
