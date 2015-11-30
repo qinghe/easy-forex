@@ -31,7 +31,7 @@ module Account
     private
 
     def exchange_params
-      params.require(:exchange).permit(:title, :amount)
+      params.require(:exchange).permit(:title, :amount, :pair_currency, :city)
     end
 
   end
