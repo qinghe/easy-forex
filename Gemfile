@@ -48,6 +48,9 @@ gem 'high_voltage', '~> 2.4.0'
 
 # Enumerated attributes with I18n
 gem 'enumerize'
+
+# AUTHORIZATION
+gem "pundit"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
