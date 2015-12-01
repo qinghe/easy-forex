@@ -3,7 +3,7 @@
 
   <div class="row padded">
     <div class="col-xs-12 col-md-4 col-md-offset-1">
-      <%= image_tag "placeholder.png", class: "profile-pict"%>
+      <%= image_tag user_pict(current_user), class: "profile-pict"%>
       <%= f.input :picture %>
     </div>
     <div class="col-xs-12 col-md-3">
