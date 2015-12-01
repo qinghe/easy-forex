@@ -3,9 +3,23 @@
     <div class="card">
       <%= link_to account_exchange_path(exchange) do %>
         <h5><%= exchange.title %></h5>
-        <p><%= exchange.amount %></p>
-        <p><%= exchange.pair_currency %></p>
+        <div class="row">
+          <div class="col-xs-12 col-md-5">
+            <%= image_tag user_pict(exchange.user), class: "card-user avatar avatar-large avatar-bordered" %>
+          </div>
+          <div class="col-xs-12 col-md-5">
+            <p><%= exchange.user.first_name %></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-md-5">
+            <p><%= exchange.amount %></p>
+          </div>
+          <div class="col-xs-12 col-md-5">
+            <p><%= exchange.pair_currency %></p>
+          </div>
         <% end %>
+      </div>
     </div>
   </div>
 </div>
