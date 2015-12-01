@@ -20,7 +20,12 @@
         <% if user_signed_in? %>
           <li>
             <%= link_to new_account_exchange_path do %>
-              <i class="fa fa-upload"></i> <%= t(".posts", default: "Post an exchange") %>
+              <i class="fa fa-upload"></i> <%= t(".posts", default: "Post an Exchange") %>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to account_exchanges_path do %>
+              <i class="fa fa-exchange"></i> <%= t(".exchanges", default: "Discover All Exchanges") %>
             <% end %>
           </li>
           <li>
