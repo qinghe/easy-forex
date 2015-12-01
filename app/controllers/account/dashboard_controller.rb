@@ -1,8 +1,7 @@
 module Account
-  class DashboardsController < Account::Base
+  class DashboardController < Account::Base
 
     def show
-
     end
 
   end
