@@ -1,5 +1,5 @@
 module Account
-  class BookingsController < Account::Base
+  class DashboardsController < Account::Base
 
     def show
 
