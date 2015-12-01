@@ -1,6 +1,6 @@
 .banner {
   background-size : cover;
-  color           : black;
+  color           : white;
   padding-top     : 50px;
   padding-bottom  : 50px;
   position        : relative;
@@ -13,9 +13,17 @@
 }
 
 .show-img-cover {
+  background-image    : url("https://unsplash.it/1280/1024?random");
   background-size     : cover;
   background-position : center;
-  height              : 60vh;
+  height              : 40vh;
   overflow            : hidden;
-  background-image    : image-url("exchange-money.jpg");
+}
+
+.index-img-cover {
+  background-image    : url("https://unsplash.it/1280/1024?image=693");
+  background-size     : cover;
+  background-position : center;
+  height              : 40vh;
+  overflow            : hidden;
 }

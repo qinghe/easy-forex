@@ -1,7 +1,7 @@
 <div class="banner show-img-cover">
   <div class="banner-content text-center">
     <h1 id="exchange-name"><%= @exchange.title %></h1>
-    <div class="padded">
+    <div>
       <%= link_to "#", {class: "btn btn-primary"} do %>
         <h5>Book</h5>
       <% end %>
@@ -76,4 +76,9 @@
     </div>
   </div>
   <hr>
+  <div class="col-xs-12 col-md-6 col-md-offset-4 padding-bottom">
+    <%= link_to account_exchanges_path do %>
+      <i class="btn btn-primary fa fa-home"> Back to all Exchanges</i>
+    <% end %>
+  </div>
 </div>
