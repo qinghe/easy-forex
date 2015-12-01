@@ -1,2 +1,79 @@
-<h2><%= @exchange.title %></h2>
-<p><%= @exchange.amount %></p>
+<div class="banner show-img-cover">
+  <div class="banner-content text-center">
+    <h1 id="exchange-name"><%= @exchange.title %></h1>
+    <div class="padded">
+      <%= link_to "#", {class: "btn btn-primary"} do %>
+        <h5>Book</h5>
+      <% end %>
+    </div>
+  </div>
+</div>
+<div class="content container">
+  <div class="row">
+    <div class="col-xs-12 col-md-3 col-md-offset-2 text-left">
+      <p><strong>Amount of based currency :</strong></p>
+    </div>
+    <div class="col-xs-12 col-md-3 text-left">
+      <p><%= @exchange.amount %></p>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12 col-md-3 col-md-offset-2 text-left">
+      <p><strong>Pair Currency :</strong></p>
+    </div>
+    <div class="col-xs-12 col-md-6 text-left">
+      <p><%= @exchange.pair_currency %></p>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12 col-md-3 col-md-offset-2 text-left">
+      <p><strong>Actual Rate :</strong></p>
+    </div>
+    <div class="col-xs-12 col-md-6 text-left">
+      <p><%= "8,3" %></p>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12 col-md-3 col-md-offset-2 text-left">
+      <p><strong>Amount of variable currency :</strong></p>
+    </div>
+    <div class="col-xs-12 col-md-6 text-left">
+      <p><%= "1660" %></p>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12 col-md-3 col-md-offset-2 text-left">
+      <p><strong>Exchange's City :</strong></p>
+    </div>
+    <div class="col-xs-12 col-md-6 text-left">
+      <p><%= @exchange.city %></p>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12 col-md-3 col-md-offset-2 text-left">
+      <p><strong>Exchange validity :</strong></p>
+    </div>
+    <div class="col-xs-12 col-md-6 text-left">
+      <p><%= @exchange.meeting_date %></p>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12 col-md-3 col-md-offset-2 text-left">
+      <p><strong>Forexer :</strong></p>
+    </div>
+    <div class="col-xs-12 col-md-6 text-left">
+      <%= link_to account_profile_path(@exchange.user) do %>
+        <%= image_tag user_pict(@exchange.user), class: "card-user avatar avatar-large avatar-bordered" %>
+        <%= @exchange.user.first_name %>
+        <%= @exchange.user.last_name %>
+      <% end %>
+    </div>
+  </div>
+  <hr>
+</div>

@@ -13,7 +13,7 @@ Rails.application.routes.draw do
     end
 
     resources :exchanges, only: [:index, :show, :new, :create, :edit, :update, :destroy]
-    resources :profile, only: [:edit, :update], controller: "profile"
+    resources :profile, only: [:show, :edit, :update], controller: "profile"
   end
 
 end
