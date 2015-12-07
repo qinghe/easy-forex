@@ -5,8 +5,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, omniauth_providers: [:facebook]
 
-  has_many :exchanges,  foreign_key: 'user_id',  dependent: :destroy
-  has_many :bookings, dependent: :destroy
+  has_many :exchanges,  foreign_key: 'seller_id',  dependent: :destroy
+  has_many :bookings, foreign_key: 'buyer_id', dependent: :destroy
   has_many :reviews,  through: :exchanges
 
   validates_presence_of :first_name
@@ -29,5 +29,7 @@ class User < ActiveRecord::Base
       user.token = auth.credentials.token
       user.token_expiry = Time.at(auth.credentials.expires_at)
     end
+
   end
+
 end
