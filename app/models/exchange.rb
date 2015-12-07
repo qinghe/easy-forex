@@ -7,6 +7,6 @@ class Exchange < ActiveRecord::Base
 
   enumerize :pair_currency, in: [:EUR_USD, :EUR_HKD, :EUR_GBP]
 
-  validates_presence_of :title, :amount
+  validates_presence_of :title, :amount, :seller
 
 end

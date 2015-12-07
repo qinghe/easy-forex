@@ -4,9 +4,9 @@
       <%= link_to account_exchange_path(exchange) do %>
         <div class="row">
           <div class="col-xs-12">
-            <%= image_tag user_pict(exchange.user), class: "card-user avatar avatar-large avatar-bordered" %>
-            <%= exchange.user.first_name %>
-            <%= exchange.user.last_name %>
+            <%= image_tag user_pict(exchange.seller), class: "card-user avatar avatar-large avatar-bordered" %>
+            <%= exchange.seller.first_name %>
+            <%= exchange.seller.last_name %>
           </div>
         </div>
         <h4><%= exchange.title %></h4>

@@ -2,7 +2,7 @@
   <div class="banner-content text-center">
     <h1 id="exchange-name"><%= @exchange.title %></h1>
     <div>
-      <%= link_to "#", {class: "btn btn-primary"} do %>
+      <%= link_to new_account_exchange_bookings_path(@exchange), {class: "btn btn-primary"} do %>
         <h5>Book</h5>
       <% end %>
     </div>
@@ -32,7 +32,7 @@
       <p><strong>Actual Rate :</strong></p>
     </div>
     <div class="col-xs-12 col-md-6 text-left">
-      <p><%= "8,3" %></p>
+      <p><%= @exchange.rate %></p>
     </div>
   </div>
   <hr>
@@ -41,7 +41,7 @@
       <p><strong>Amount of variable currency :</strong></p>
     </div>
     <div class="col-xs-12 col-md-6 text-left">
-      <p><%= "1660" %></p>
+      <p><%= @exchange.exchange_amout %></p>
     </div>
   </div>
   <hr>
@@ -68,10 +68,10 @@
       <p><strong>Forexer :</strong></p>
     </div>
     <div class="col-xs-12 col-md-6 text-left">
-      <%= link_to account_profile_path(@exchange.user) do %>
-        <%= image_tag user_pict(@exchange.user), class: "card-user avatar avatar-large avatar-bordered" %>
-        <%= @exchange.user.first_name %>
-        <%= @exchange.user.last_name %>
+      <%= link_to account_profile_path(@exchange.seller) do %>
+        <%= image_tag user_pict(@exchange.seller), class: "card-user avatar avatar-large avatar-bordered" %>
+        <%= @exchange.seller.first_name %>
+        <%= @exchange.seller.last_name %>
       <% end %>
     </div>
   </div>

@@ -12,7 +12,10 @@ Rails.application.routes.draw do
       resource :reviews, only: [:new, :create], controller: "bookings/reviews"
     end
 
-    resources :exchanges, only: [:index, :show, :new, :create, :edit, :update, :destroy]
+    resources :exchanges, only: [:index, :show, :new, :create, :edit, :update, :destroy] do
+      resource :bookings, only: [:index, :new, :create]
+    end
+
     resource :profile, only: [:show, :edit, :update], controller: "profile"
     resource :dashboard, only: :show, controller: "dashboard"
   end
