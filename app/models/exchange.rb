@@ -1,7 +1,7 @@
 class Exchange < ActiveRecord::Base
   extend Enumerize
 
-  belongs_to :user, class_name: "User", foreign_key: "user_id"
+  belongs_to :seller, class_name: "User", foreign_key: "seller_id"
 
   has_one :booking, dependent: :destroy
 
