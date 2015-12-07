@@ -1,13 +1,15 @@
-<div class="banner index-img-cover">
-  <div class="banner-content text-center">
-    <h1>Discover All Exchanges</h1>
+<div class="body-colored">
+  <div class="banner index-img-cover">
+    <div class="banner-content text-center">
+      <h1>Discover All Exchanges</h1>
+    </div>
   </div>
-</div>
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 padding-top"></div>
-    <% @exchanges.each do |exchange| %>
-      <%= render 'exchange_box', exchange: exchange %>
-    <% end %>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 padding-top"></div>
+      <% @exchanges.each do |exchange| %>
+        <%= render 'exchange_box', exchange: exchange %>
+      <% end %>
+    </div>
   </div>
 </div>

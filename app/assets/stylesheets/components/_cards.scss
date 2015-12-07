@@ -1,9 +1,10 @@
 .map-card {
-  border           : 1px solid #f1f1f1;
+  border           : 2px solid #d3d3d3;
   padding          : 0px 10px;
   margin           : 5px 0px;
-  background-color : #f1f1f1;
-  box-shadow       : 0 2px 5px 0 rgba(0,0,0,.26);
+  background-color : white;
+  border-radius    : 8px;
+  // box-shadow       : 0 2px 5px 0 rgba(0,0,0,.26);
 }
 
 .card {
