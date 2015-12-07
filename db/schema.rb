@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151207123025) do
+ActiveRecord::Schema.define(version: 20151207223408) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,17 +39,17 @@ ActiveRecord::Schema.define(version: 20151207123025) do
 
   create_table "exchanges", force: :cascade do |t|
     t.string   "title"
-    t.integer  "amount"
-    t.datetime "created_at",                         null: false
-    t.datetime "updated_at",                         null: false
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
     t.string   "city"
     t.date     "meeting_date"
     t.integer  "user_id"
-    t.decimal  "rate",                 precision: 4
-    t.integer  "exchange_amout"
     t.integer  "seller_id"
     t.integer  "variable_currency_id"
     t.integer  "base_currency_id"
+    t.float    "rate"
+    t.float    "amount"
+    t.float    "exchange_amount"
   end
 
   create_table "reviews", force: :cascade do |t|
