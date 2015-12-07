@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151206232453) do
+ActiveRecord::Schema.define(version: 20151207091722) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20151206232453) do
     t.datetime "updated_at",        null: false
     t.integer  "user_id"
     t.text     "message"
+    t.integer  "buyer_id"
   end
 
   add_index "bookings", ["exchange_id"], name: "index_bookings_on_exchange_id", using: :btree
@@ -40,6 +41,7 @@ ActiveRecord::Schema.define(version: 20151206232453) do
     t.integer  "user_id"
     t.decimal  "rate",           precision: 4
     t.integer  "exchange_amout"
+    t.integer  "seller_id"
   end
 
   create_table "reviews", force: :cascade do |t|
