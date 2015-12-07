@@ -11,13 +11,14 @@ class Exchange < ActiveRecord::Base
 
   def get_pair_currency_rate
     yahoo_client = YahooFinance::Client.new
-    self.rate = yahoo_client.quotes(["#{self.base_currency.code}#{self.variable_currency.code}=X"], [:ask, :bid, :last_trade_price], { raw: false })
+    rate = yahoo_client.quotes(["#{self.base_currency.code}#{self.variable_currency.code}=X"], [:last_trade_price], { raw: false }).first.last_trade_price.to_f
+    self.update(rate: rate)
     calculate_exchange_amount
   end
 
-  private
-
   def calculate_exchange_amount
-    self.exchange_amout = self.amount * self.rate
+    self.exchange_amount = self.amount * self.rate
+    self.update(exchange_amount: exchange_amount)
   end
+
 end

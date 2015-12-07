@@ -7,6 +7,10 @@ module Account
 
     def show
       @exchange = Exchange.find(params[:id])
+      @exchange.get_pair_currency_rate
+      @rate = @exchange.rate
+      @amount = @exchange.amount
+      @exchange_amount = @exchange.exchange_amount
     end
 
     def new
@@ -31,7 +35,7 @@ module Account
     private
 
     def exchange_params
-      params.require(:exchange).permit(:title, :amount, :pair_currency, :city)
+      params.require(:exchange).permit(:title, :amount, :base_currency, :variable_currency, :exchange_amount, :city)
     end
 
   end
