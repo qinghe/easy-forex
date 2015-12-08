@@ -20,9 +20,5 @@ Rails.application.routes.draw do
     resource :profile, only: [:show, :edit, :update], controller: "profile"
     resource :dashboard, only: :show, controller: "dashboard"
   end
-  require "sidekiq/web"
-  authenticate :user, lambda { |u| u.admin } do
-    mount Sidekiq::Web => '/sidekiq'
-  end
 
 end
