@@ -1,0 +1,31 @@
+.form-container {
+  padding-left: 20%;
+  padding-right: 20%;
+
+}
+
+.form-group {
+  position:relative;
+  & > label{
+    color: $gray-light;
+  }
+  & > input[type="text"], input[type="number"], select {
+    border: 0px solid transparent;
+    border: 2px solid rgba(255, 84, 0, 0.2);
+    border-radius: 1px ;
+
+    outline: none;
+    &:focus{
+      outline: none;
+      color: white;
+      border: 2px solid $orange;
+    }
+
+  }
+}
+form > .btn {
+  margin-top: 20px;
+  width: 100%;
+}
+
+
