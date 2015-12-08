@@ -7,7 +7,6 @@ module Account
 
     def show
       @exchange = Exchange.find(params[:id])
-      @exchange.get_pair_currency_rate
       @rate = @exchange.rate
       @amount = @exchange.amount
       @exchange_amount = @exchange.exchange_amount

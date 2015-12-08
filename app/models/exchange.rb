@@ -9,6 +9,12 @@ class Exchange < ActiveRecord::Base
 
   validates_presence_of :title, :amount, :seller
 
+  def self.update_rates
+    self.all.each do |exchange|
+      exchange.get_pair_currency_rate
+    end
+  end
+
   def get_pair_currency_rate
     yahoo_client = YahooFinance::Client.new
     rate = yahoo_client.quotes(["#{self.base_currency.code}#{self.variable_currency.code}=X"], [:last_trade_price], { raw: false }).first.last_trade_price.to_f
@@ -20,5 +26,9 @@ class Exchange < ActiveRecord::Base
     self.exchange_amount = self.amount * self.rate
     self.update(exchange_amount: exchange_amount)
   end
+
+  private
+
+
 
 end
