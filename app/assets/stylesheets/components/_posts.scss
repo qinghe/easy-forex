@@ -1,0 +1,30 @@
+
+.post-exchange {
+  padding          : 0px 10px;
+  margin           : 5px 0px;
+  background-color : white;
+  &:hover {
+    background : #F1F1F1;
+  }
+}
+
+.post {
+  height          : 100px;
+  display         : flex;
+  justify-content : space-between;
+  flew-direction  : row;
+}
+
+.post-currency {
+  width: 200px;
+
+}
+
+.post-title {
+  width: 400px;
+}
+
+.post-seller {
+  width: 100px;
+}
+

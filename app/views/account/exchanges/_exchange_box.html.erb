@@ -1,16 +1,18 @@
-<div class="col-xs-12 col-md-4">
-  <div class="map-card">
-    <div class="card">
-      <%= link_to account_exchange_path(exchange) do %>
-        <div class="row">
-          <div class="col-xs-12">
-            <%= image_tag user_pict(exchange.seller), class: "card-user avatar avatar-large avatar-bordered" %>
-            <%= exchange.seller.first_name %>
-            <%= exchange.seller.last_name %>
-          </div>
+<div class="col-xs-12">
+  <div class="post-exchange">
+    <%= link_to account_exchange_path(exchange) do %>
+      <div class="post">
+        <div class="post-currency">
+          <p><%= exchange.base_currency.name %> / <%= exchange.variable_currency.name %></p>
         </div>
-        <h4><%= exchange.title %></h4>
-      <% end %>
-    </div>
+        <div class="post-title">
+          <h4><%= exchange.title %></h4>
+        </div>
+        <div class="post-seller">
+          <%= image_tag user_pict(exchange.seller), class: "card-user avatar avatar-large avatar-bordered" %>
+          <%= exchange.seller.first_name %>
+        </div>
+      </div>
+    <% end %>
   </div>
 </div>
