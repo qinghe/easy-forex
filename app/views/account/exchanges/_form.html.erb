@@ -1,10 +1,16 @@
-<%= simple_form_for [:account, @exchange] do |f| %>
-  <%= f.error_notification %>
+<div class="form-container">
+  <%= simple_form_for [:account, @exchange] do |f| %>
+    <%= f.error_notification %>
 
-  <%= f.input :title %>
-  <%= f.input :amount %>
-  <%= f.input :pair_currency, prompt: "Select a pair currency" %>
-  <%= f.input :city %>
+    <%= f.input :title, class: "inactive" %>
 
-  <%= f.button :submit, "Save", class: 'btn btn-primary' %>
-<% end %>
+    <%= f.input :amount %>
+    <%= f.input :base_currency %>
+    <%= f.input :variable_currency, prompt: "The currency you want to get in return" %>
+    <%= f.input :city %>
+
+    <%= f.button :submit, "Save", class: 'btn btn-primary' %>
+  <% end %>
+</div>
+
+
