@@ -1,6 +1,6 @@
 .show-gradient
   h2.text-center #{@exchange.city}
-  h4.text-center #{@exchange.meeting_date}
+  h4.text-center Between : #{@exchange.start_date} and #{@exchange.end_date}
 .container
   br
   br
@@ -26,7 +26,7 @@
         .exchange-icon
           i.fa.fa-exchange.fa-rotate-90.fa-supersize
         .exchange-rate
-          p Today's rate : 1 for #{number_with_delimiter(@exchange.rate.round(2))}
+          p Today's rate : 1 for #{number_with_delimiter(@exchange.rate)}
     .col-xs-12.col-sm-4
       .buyer-container
         p #{@exchange.variable_currency.name}s
@@ -40,7 +40,7 @@
 
   .row
     .col-sm-offset-8.col-sm-4
-      =link_to account_exchanges_path
+      =link_to new_account_exchange_bookings_path(@exchange)
         .btn.btn-primary.full-width Execute this exchange
 
   .row.bottom-link
