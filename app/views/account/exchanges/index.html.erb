@@ -26,12 +26,3 @@
     </div>
   </div>
 </div>
-
-<!-- Include Google Maps JS API -->
-
-<% content_for(:after_js) do %>
-
-  <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places&key=#{ENV['GGL_MAP_JS_BROWSER_API_KEY']}" %>
-  <%= javascript_include_tag 'autocomplete.js' %>
-
-<% end %>
