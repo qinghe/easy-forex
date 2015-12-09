@@ -1,0 +1,23 @@
+.search-bar {
+  z-index: 2;
+  position: absolute;
+  background-color: rgba(0,0,0,0.6);
+  bottom: 0;
+  width: 100%;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.searchbar-input {
+  display: block;
+  height: 44px;
+  padding-left: 12px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.searchbar-button {
+  height: 44px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}

@@ -3,6 +3,16 @@ module Account
 
     def index
       @exchanges  = Exchange.all
+
+      if params[:city].presence
+        @exchanges = @exchanges.where(city: params[:city])
+
+        if @exchanges.empty?
+          flash[:notice] = "No exchange available in this city !"
+          redirect_to territories_path
+        end
+      end
+
     end
 
     def show
