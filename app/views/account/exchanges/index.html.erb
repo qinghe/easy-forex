@@ -9,7 +9,7 @@
           <form role="form" action="/exchanges/" class="form-inline">
             <div class="form-group text-center">
               <fieldset>
-                <%= text_field_tag :city, params[:city], class: "searchbar-input allwidth-xs form-control", placeholder: "City" %>
+                <%= text_field_tag :city, params[:city], id: "user_input_autocomplete_address", class: "searchbar-input allwidth-xs form-control", placeholder: "City" %>
               </fieldset>
             </div>
           </form>
@@ -26,3 +26,12 @@
     </div>
   </div>
 </div>
+
+<!-- Include Google Maps JS API -->
+
+<% content_for(:after_js) do %>
+
+  <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places&key=#{ENV['GGL_MAP_JS_BROWSER_API_KEY']}" %>
+  <%= javascript_include_tag 'autocomplete.js' %>
+
+<% end %>
