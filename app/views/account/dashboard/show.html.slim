@@ -1,0 +1,10 @@
+h1 Dashboard
+
+h2 My Bookings
+
+= current_user.bookings.each do |booking|
+  p = booking.exchange.seller.first_name
+  p = booking.exchange.seller.last_name
+  =link_to 'Post a review', new_user_review_path(booking.exchange.seller), class: 'btn btn-primary'
+
+
