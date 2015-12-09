@@ -13,18 +13,29 @@
   display         : flex;
   justify-content : space-between;
   flew-direction  : row;
+  align-items     : center;
 }
 
-.post-currency {
-  width: 200px;
-
+.post-based-currency {
+  width : 200px;
+  color : $gray;
 }
 
-.post-title {
-  width: 400px;
+.post-variable-currency {
+  width : 200px;
+  color : $gray;
+}
+
+.post-icon {
+  width     : 100px;
+  font-size : 30px;
 }
 
 .post-seller {
-  width: 100px;
+  width : 100px;
+}
+
+.post-city {
+  width : 150px;
 }
 

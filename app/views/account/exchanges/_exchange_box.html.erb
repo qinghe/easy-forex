@@ -2,15 +2,22 @@
   <div class="post-exchange">
     <%= link_to account_exchange_path(exchange) do %>
       <div class="post">
-        <div class="post-currency">
-          <p><%= exchange.base_currency.name %> / <%= exchange.variable_currency.name %></p>
-        </div>
-        <div class="post-title">
-          <h4><%= exchange.title %></h4>
-        </div>
         <div class="post-seller">
           <%= image_tag user_pict(exchange.seller), class: "card-user avatar avatar-large avatar-bordered" %>
-          <%= exchange.seller.first_name %>
+        </div>
+        <div class="post-based-currency">
+          <p>I have : <b><%= exchange.amount.round(0) %></b></p>
+          <h4><%= exchange.base_currency.name %>s</h4>
+        </div>
+        <div class="post-icon">
+          <i class="fa fa-exchange"></i>
+        </div>
+        <div class="post-variable-currency">
+          <p>I want : <b><%= exchange.exchange_amount.round(2) %></b></p>
+          <h4><%= exchange.variable_currency.name %>s</h4>
+        </div>
+        <div class="post-city">
+          <h5><i class="fa fa-map-marker"></i> <%= exchange.city %></h5>
         </div>
       </div>
     <% end %>
