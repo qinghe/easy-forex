@@ -1,10 +1,44 @@
-h1 Dashboard
+.container
+  h1.text-center Dashboard
+  h2.text-center My Bookings
+  br
+  .row
+    .col-xs-8.col-sm-4
+        h3 Exchange
+    .col-xs-4.col-sm-2
+      h3 Place
+    .col-xs-8.col-sm-4
+      h3 Forexer
+    .col-xs-4.col-sm-2
+      h3 Status
+  hr
+  - current_user.bookings.each do |booking|
+    .row
+      .col-xs-8.col-sm-4
+        .post-exchange.dashboard-exchange-recap
+          = link_to account_exchange_path(booking.exchange)
+            .post
+              .post-based-currency
+                p= booking.exchange.amount.round(0)
+                p= booking.exchange.base_currency.name
+              .post-icon
+                i.fa.fa-exchange
+              .post-variable-currency
+                p= booking.exchange.exchange_amount.round(2)
+                p= booking.exchange.variable_currency.name
 
-h2 My Bookings
-
-= current_user.bookings.each do |booking|
-  p = booking.exchange.seller.first_name
-  p = booking.exchange.seller.last_name
-  =link_to 'Post a review', new_user_review_path(booking.exchange.seller), class: 'btn btn-primary'
+      .col-xs-4.col-sm-2
+        .place-information
+          h5
+            i.fa.fa-map-marker = booking.exchange.city
+      .col-xs-8.col-sm-4
+        .forexer-information
+          = image_tag user_pict(booking.exchange.seller), class: "card-user avatar avatar-large avatar-bordered"
+          p #{booking.exchange.seller.first_name} #{booking.exchange.seller.last_name}
+          = link_to 'Post a review', new_user_review_path(booking.exchange.seller), class: 'btn btn-primary'
+      .col-xs-4.col-sm-2
+        .status-information
+          = booking.status
+    hr
 
 
