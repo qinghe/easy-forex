@@ -30,6 +30,8 @@ gem 'font-awesome-sass', '~> 4.2.0'
 gem 'simple_form'
 gem "autoprefixer-rails"
 
+gem 'slim'
+
 gem 'sidekiq', '~> 4.0.1'
 gem 'sidekiq-scheduler', '~> 2.0.0'
 gem 'sinatra'  # Dependency of sidekiq

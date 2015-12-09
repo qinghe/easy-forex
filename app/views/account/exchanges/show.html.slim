@@ -1,0 +1,47 @@
+.show-gradient
+  h2.text-center #{@exchange.city}
+  h4.text-center #{@exchange.meeting_date}
+.container
+  br
+  br
+  .row
+    .col-xs-12.col-sm-4
+      .seller-container
+        p #{@exchange.base_currency.name}s
+        br
+        .profile-card
+          = link_to account_profile_path(@exchange.seller)
+            = image_tag user_pict(@exchange.seller), class: "card-user avatar avatar-xl avatar-bordered"
+            h3 #{@exchange.seller.first_name} #{@exchange.seller.last_name}
+        .exchange-base-card
+          h3 #{@exchange.amount} #{@exchange.base_currency.code}
+    .hidden-xs.col-sm-4
+      .exchange-container
+        .exchange-icon
+          i.fa.fa-exchange.fa-supersize
+        .exchange-rate
+          p Today's rate : 1 for #{number_with_delimiter(@exchange.rate.round(2))}
+    .visible-xs.col-xs-12.col-sm-4
+      .exchange-container
+        .exchange-icon
+          i.fa.fa-exchange.fa-rotate-90.fa-supersize
+        .exchange-rate
+          p Today's rate : 1 for #{number_with_delimiter(@exchange.rate.round(2))}
+    .col-xs-12.col-sm-4
+      .buyer-container
+        p #{@exchange.variable_currency.name}s
+        br
+        .profile-card
+          = link_to '#'
+            i.fa.fa-question.avatar.avatar-xl.avatar-bordered
+            h3 You
+        .exchange-variable-card
+          h3 #{number_with_delimiter(@exchange.exchange_amount.round(2))} #{@exchange.variable_currency.code}
+
+  .row
+    .col-sm-offset-8.col-sm-4
+      =link_to account_exchanges_path
+        .btn.btn-primary.full-width Execute this exchange
+
+  .row.bottom-link
+    = link_to '<< Back to all Exchanges', account_exchanges_path

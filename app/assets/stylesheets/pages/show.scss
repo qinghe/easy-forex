@@ -1,0 +1,65 @@
+.fa-rotate-90 {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.show-gradient{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: rgb(238,238,238); /* Old browsers */
+  background: -moz-linear-gradient(-45deg,  rgba(238,238,238,1) 0%, rgba(204,204,204,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg,  rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg,  rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+.seller-container, .buyer-container {
+  padding: 2%;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  margin-bottom: 20px;
+  height: 285px;
+  text-align:center;
+  background-color: $gray-lighter;
+}
+
+.fa-supersize {
+  font-size: 150px;
+  color: $gray;
+  margin: auto
+}
+
+.exchange-container{
+  height: 285px
+}
+
+.exchange-icon {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding-top: 10px;
+  padding-bottom: 60px;
+}
+
+.exchange-rate {
+  border: 1px solid $gray;
+  padding: 10px 8px 2px 8px;
+  text-align:center;
+  border-radius: 5px;
+  color: $gray;
+  margin-bottom: 20px
+}
+
+.profile-card > a > .fa-question {
+  font-size: 90px;
+  color: $gray
+}
+
+.bottom-link {
+  padding-top: 20px;
+  padding-bottom: 20px
+}
