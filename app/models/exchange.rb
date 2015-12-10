@@ -7,7 +7,10 @@ class Exchange < ActiveRecord::Base
 
   has_one :booking, dependent: :destroy
 
-  validates_presence_of :title, :amount, :seller
+  geocoded_by :city
+  after_validation :geocode, if: :city_changed?
+
+  validates_presence_of :amount, :seller, :city
 
   def self.update_rates
     self.all.each do |exchange|
