@@ -6,8 +6,9 @@ class User < ActiveRecord::Base
          :omniauthable, omniauth_providers: [:facebook]
 
   has_many :exchanges,  foreign_key: 'seller_id',  dependent: :destroy
+  has_many :reviews,  foreign_key: 'reviewed_user_id',  dependent: :destroy
+  has_many :reviews,  foreign_key: 'reviewer_user_id',  dependent: :destroy
   has_many :bookings, foreign_key: 'buyer_id', dependent: :destroy
-  has_many :reviews,  through: :exchanges
 
   validates_presence_of :first_name
 

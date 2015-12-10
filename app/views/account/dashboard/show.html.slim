@@ -2,19 +2,11 @@
   h1.text-center Dashboard
   h2.text-center My Bookings
   br
-  .row
-    .col-xs-8.col-sm-4
-        h3 Exchange
-    .col-xs-4.col-sm-2
-      h3 Place
-    .col-xs-8.col-sm-4
-      h3 Forexer
-    .col-xs-4.col-sm-2
-      h3 Status
   hr
   - current_user.bookings.each do |booking|
     .row
       .col-xs-8.col-sm-4
+        h4 Exchange
         .post-exchange.dashboard-exchange-recap
           = link_to account_exchange_path(booking.exchange)
             .post
@@ -28,15 +20,18 @@
                 p= booking.exchange.variable_currency.name
 
       .col-xs-4.col-sm-2
+        h4 Place
         .place-information
           h5
             i.fa.fa-map-marker = booking.exchange.city
       .col-xs-8.col-sm-4
+        h4 Forexer
         .forexer-information
           = image_tag user_pict(booking.exchange.seller), class: "card-user avatar avatar-large avatar-bordered"
           p #{booking.exchange.seller.first_name} #{booking.exchange.seller.last_name}
-          = link_to 'Post a review', new_user_review_path(booking.exchange.seller), class: 'btn btn-primary'
+          = link_to 'Post a review', new_user_review_path(booking.exchange.seller, :booking_id => booking), class: 'btn btn-primary'
       .col-xs-4.col-sm-2
+        h4 Status
         .status-information
           = booking.status
     hr
