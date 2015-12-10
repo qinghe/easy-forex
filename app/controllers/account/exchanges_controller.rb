@@ -9,7 +9,7 @@ module Account
 
         if @exchanges.empty?
           flash[:notice] = "No exchange available in this city !"
-          redirect_to account_exchange_path
+          redirect_to account_exchanges_path
         end
       end
 
