@@ -5,11 +5,11 @@ module Account
       @exchanges  = Exchange.all
 
       if params[:city].presence
-        @exchanges = @exchanges.where(city: params[:city])
+        @exchanges = @exchanges.near(params[:city], 20)
 
         if @exchanges.empty?
           flash[:notice] = "No exchange available in this city !"
-          redirect_to territories_path
+          redirect_to account_exchange_path
         end
       end
 
