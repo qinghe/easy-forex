@@ -13,14 +13,21 @@
   padding-bottom: 5em;
 }
 
-
-
 .padding-top {
   padding-top: 2em;
 }
 
 .padding-bottom {
   padding-bottom: 2em;
+}
+
+.body-wrapper {
+  position       : relative;
+  padding-bottom : 30px;
+  min-height     : 100%;
+  height         : auto;
+  height         : 100%;
+  margin: 0 auto 90px;
 }
 
 // Margin

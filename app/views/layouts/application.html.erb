@@ -16,8 +16,9 @@
 
   <%= render "shared/navbar" %>
 
-  <%= yield %>
-
+  <div class="body-wrapper">
+    <%= yield %>
+  </div>
   <%= render "shared/footer" %>
 
   <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places&key=#{ENV['GGL_MAP_JS_BROWSER_API_KEY']}" %>
