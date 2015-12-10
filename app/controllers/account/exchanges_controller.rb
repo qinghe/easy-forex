@@ -4,6 +4,22 @@ module Account
     def index
       @exchanges  = Exchange.all
 
+      if params[:base_currency].presence
+        @exchanges = @exchanges.where(base_currency_id: Currency.where(name: params[:base_currency]))
+        if @exchanges.empty?
+          flash[:notice] = "No exchange available in this city !"
+          redirect_to account_exchanges_path
+        end
+      end
+
+      if params[:variable_currency].presence
+        @exchanges = @exchanges.where(variable_currency_id: Currency.where(name: params[:variable_currency]))
+        if @exchanges.empty?
+          flash[:notice] = "No exchange available in this city !"
+          redirect_to account_exchanges_path
+        end
+      end
+
       if params[:city].presence
         @exchanges = @exchanges.near(params[:city], 20)
 
@@ -12,6 +28,20 @@ module Account
           redirect_to account_exchanges_path
         end
       end
+
+      @search_base_currency = []
+      @exchanges.each do |exchange|
+        @search_base_currency << exchange.base_currency.name
+      end
+
+      @search_base_currency = @search_base_currency.uniq
+
+      @search_variable_currency = []
+      @exchanges.each do |exchange|
+        @search_variable_currency << exchange.variable_currency.name
+      end
+
+      @search_variable_currency = @search_variable_currency.uniq
 
     end
 
