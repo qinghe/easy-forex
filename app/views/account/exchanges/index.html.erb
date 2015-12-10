@@ -5,7 +5,21 @@
     </div>
     <div class="container search-bar">
       <div class="row">
-        <div class="col-xs-12 col-md-12 text-center">
+        <div class="col-xs-12 col-md-4 text-center">
+          <form role="form" action="/account/exchanges/" class="form-inline">
+            <div class="form-group text-center">
+              <%= select_tag :base_currency, options_for_select(@search_base_currency), prompt: "Currency base", class: "form-control searchbar-input", :onchange => "this.form.submit()" %>
+            </div>
+          </form>
+        </div>
+        <div class="col-xs-12 col-md-4 text-center">
+          <form role="form" action="/account/exchanges/" class="form-inline">
+            <div class="form-group text-center">
+              <%= select_tag :variable_currency, options_for_select(@search_variable_currency), prompt: "Currency variable", class: "form-control searchbar-input", :onchange => "this.form.submit()" %>
+            </div>
+          </form>
+        </div>
+        <div class="col-xs-12 col-md-4 text-center">
           <form role="form" action="/account/exchanges/" class="form-inline">
             <div class="form-group text-center">
               <fieldset>
