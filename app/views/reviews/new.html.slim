@@ -1,21 +1,20 @@
 .container
-  h1.text-center.review-title.test-green Post your review
+  h1.text-center.review-title Post your review
   br
   .row
     .col-xs-8
-      = simple_form_for [@user,@review] do |f|
+      = simple_form_for [@reviewed_user,@review] do |f|
         h4 Rating:
         input type="number" class="rating" id="test" name="rating" data-min="1" data-max="5" value="0"
         br
-        = f.input :booking_id, :input_html => { :booking_id=> @booking.id }, as: :hidden
         = f.input :comment, as: :text
         = f.submit 'Post your review', class: "btn btn-primary"
 
     .col-xs-4
       .reviewed-card
-        = image_tag user_pict(@booking.exchange.seller), class: "card-user avatar avatar-large avatar-bordered"
+        = image_tag user_pict(@reviewed_user), class: "card-user avatar avatar-large avatar-bordered"
 
-        p = @booking.exchange.seller.first_name
-        p = @booking.exchange.seller.last_name
-        p = @booking.exchange.seller.email
+        p = @reviewed_user.first_name
+        p = @reviewed_user.last_name
+        p = @reviewed_user.email
 

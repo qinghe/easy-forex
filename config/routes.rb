@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   resources :users, only: [] do
     resources :reviews, only: [:new, :create]
+    # resources :profile, only: [:show], controller: "profile"
+    get 'profile'
   end
   namespace :account do
 
