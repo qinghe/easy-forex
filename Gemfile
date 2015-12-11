@@ -63,6 +63,9 @@ gem "pundit"
 
 gem "geocoder"
 
+# Elastic search
+gem 'searchkick'
+
 # Prepare for Heroku
 group :production do
   gem 'rails_12factor'

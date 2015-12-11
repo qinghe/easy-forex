@@ -79,6 +79,14 @@ GEM
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+    elasticsearch (1.0.15)
+      elasticsearch-api (= 1.0.15)
+      elasticsearch-transport (= 1.0.15)
+    elasticsearch-api (1.0.15)
+      multi_json
+    elasticsearch-transport (1.0.15)
+      faraday
+      multi_json
     enumerize (1.0.0)
       activesupport (>= 3.2)
     erubis (2.7.0)
@@ -194,6 +202,10 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    searchkick (1.1.0)
+      activemodel
+      elasticsearch (>= 1)
+      hashie
     sidekiq (4.0.1)
       concurrent-ruby (~> 1.0)
       connection_pool (~> 2.2, >= 2.2.0)
@@ -271,6 +283,7 @@ DEPENDENCIES
   redis-namespace (~> 1.5.2)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
+  searchkick
   sidekiq (~> 4.0.1)
   sidekiq-failures
   sidekiq-scheduler (~> 2.0.0)
