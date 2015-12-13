@@ -2,4 +2,3 @@ reports_daily:
   cron: "0 * * * *" # every minute
   class: Rates::RatesUpdaterWorker
   description: "Update the exchange rates"
-
