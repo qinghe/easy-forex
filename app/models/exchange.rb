@@ -1,5 +1,7 @@
 class Exchange < ActiveRecord::Base
 
+  include PgSearch
+
   belongs_to :seller, class_name: "User", foreign_key: "seller_id"
 
   belongs_to :base_currency, class_name: "Currency", foreign_key: "base_currency_id"
