@@ -1,6 +1,7 @@
 class Exchange < ActiveRecord::Base
 
   include PgSearch
+  multisearchable :against => [:base_currency, :variable_currency, :city],
 
   belongs_to :seller, class_name: "User", foreign_key: "seller_id"
 
