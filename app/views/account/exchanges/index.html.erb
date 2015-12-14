@@ -5,29 +5,28 @@
     </div>
     <div class="container search-bar">
       <div class="row">
-        <div class="col-xs-12 col-md-4 text-center">
+      <!-- FILTERS -->
           <form role="form" action="/account/exchanges/" class="form-inline">
-            <div class="form-group text-center">
-              <%= select_tag :base_currency, options_for_select(@search_base_currency), prompt: "Currency base", class: "form-control searchbar-input", :onchange => "this.form.submit()" %>
+            <div class="col-xs-12 col-md-4 text-center">
+              <div class="form-group text-center">
+                <fieldset>
+                  <%= text_field_tag :city, params[:city], id: "user_input_autocomplete_address", class: "form-control searchbar-input allwidth-xs", placeholder: "City" %>
+                  <button type="submit" class="btn btn-primary searchbar-button"><i class="fa fa-search"></i></button>
+                </fieldset>
+              </div>
+            </div>
+            <div class="col-xs-12 col-md-3 text-center">
+              <div class="form-group text-center">
+                <%= select_tag :base_currency, options_for_select(@search_base_currency), prompt: "Currency base", class: "form-control searchbar-input", :onchange => "this.form.submit()" %>
+              </div>
+            </div>
+            <div class="col-xs-12 col-md-3 text-center">
+              <div class="form-group text-center">
+                <%= select_tag :variable_currency, options_for_select(@search_variable_currency), prompt: "Currency variable", class: "form-control searchbar-input", :onchange => "this.form.submit()" %>
+              </div>
             </div>
           </form>
-        </div>
-        <div class="col-xs-12 col-md-4 text-center">
-          <form role="form" action="/account/exchanges/" class="form-inline">
-            <div class="form-group text-center">
-              <%= select_tag :variable_currency, options_for_select(@search_variable_currency), prompt: "Currency variable", class: "form-control searchbar-input", :onchange => "this.form.submit()" %>
-            </div>
-          </form>
-        </div>
-        <div class="col-xs-12 col-md-4 text-center">
-          <form role="form" action="/account/exchanges/" class="form-inline">
-            <div class="form-group text-center">
-              <fieldset>
-                <%= text_field_tag :city, params[:city], id: "user_input_autocomplete_address", class: "searchbar-input allwidth-xs form-control", placeholder: "City" %>
-              </fieldset>
-            </div>
-          </form>
-        </div>
+
       </div>
     </div>
   </div>

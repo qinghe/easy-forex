@@ -1,12 +1,8 @@
 class Exchange < ActiveRecord::Base
 
-  include PgSearch
-  multisearchable :against => [:base_currency, :variable_currency, :city],
-
-  belongs_to :seller, class_name: "User", foreign_key: "seller_id"
-
   belongs_to :base_currency, class_name: "Currency", foreign_key: "base_currency_id"
   belongs_to :variable_currency, class_name: "Currency", foreign_key: "variable_currency_id"
+  belongs_to :seller, class_name: "User", foreign_key: "seller_id"
 
   has_one :booking, dependent: :destroy
 
@@ -34,7 +30,5 @@ class Exchange < ActiveRecord::Base
   end
 
   private
-
-
 
 end
