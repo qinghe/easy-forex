@@ -63,9 +63,6 @@ gem "pundit"
 
 gem "geocoder"
 
-# Filters
-
-
 # Prepare for Heroku
 group :production do
   gem 'rails_12factor'
