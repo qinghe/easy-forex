@@ -7,6 +7,9 @@ class ApplicationController < ActionController::Base
     account_exchanges_path
   end
 
+  def default_url_options
+    { host: ENV['HOST'] || 'localhost:3000' }
+  end
 
   before_filter :configure_devise_params, if: :devise_controller?
   def configure_devise_params
