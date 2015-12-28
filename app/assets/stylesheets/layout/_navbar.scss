@@ -1,8 +1,8 @@
 /* -------------------------------------
  * Colors & Fonts
  * ------------------------------------- */
-$navbar-color: #FF5400;
-$navbar-hover-color: #505559;
+$navbar-color: #FFF;
+$navbar-hover-color: #FF5400;
 $navbar-font-family: $header-font;
 $navbar-bg: rgba(0, 0, 0, 0);
 
@@ -34,10 +34,12 @@ $navbar-profile-border-width: 2px;
 /* -------------------------------------
  * SCSS code
  * ------------------------------------- */
-.navbar{
+.navbar {
   margin-bottom: 0px;
+  left: 0px;
+  right: 0px;
   position: absolute;
-  z-index: 2;
+  z-index: 9;
 }
 
 .navbar-bootstrap-wagon {
@@ -104,9 +106,13 @@ $navbar-profile-border-width: 2px;
     margin-right: 10px;
     border-radius: $navbar-profile-radius;
   }
-
+  .icon-bar {
+    color :            white !important;
+    border-color :     white !important;
+    background-color : white !important;
+  }
   .navbar-toggle {
-    border-color: #dddddd;
+    border-color: #FFF;
     width: 45px;
     background: transparent;
   }
