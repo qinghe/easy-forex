@@ -4,12 +4,12 @@
 $navbar-color: #FF5400;
 $navbar-hover-color: #505559;
 $navbar-font-family: $header-font;
-$navbar-bg: white;
+$navbar-bg: rgba(0, 0, 0, 0);
 
 /* -------------------------------------
  * Box model
  * ------------------------------------- */
-$navbar-height: 50px;
+$navbar-height: 60px;
 $navbar-vertical-padding: 5px;
 $navbar-horizontal-padding: 20px;
 $navbar-border-bottom-width: 0;
@@ -36,6 +36,8 @@ $navbar-profile-border-width: 2px;
  * ------------------------------------- */
 .navbar{
   margin-bottom: 0px;
+  position: absolute;
+  z-index: 2;
 }
 
 .navbar-bootstrap-wagon {
@@ -116,7 +118,7 @@ $navbar-profile-border-width: 2px;
 
   .navbar-nav > li > .dropdown-menu:before{
     position: absolute;
-    background: white;
+    background: transparent;
     height: 10px;
     width: 10px;
     content: "\00a0";
