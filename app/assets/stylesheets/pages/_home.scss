@@ -6,14 +6,17 @@
     background      : url(image_path('efx-bg.jpg')) no-repeat center center fixed;
     background-size : cover;
     position        : relative;
-    min-height      : 90vh;
+    min-height      : 100vh;
+    z-index         : 1;
 }
 
 .intro-text {
   margin-top  : 200px;
-  color       : #FF5400;
+  color       : #FFF;
   text-shadow : black 0.1em 0.1em 0.2em;
   text-align  : center;
+  position: relative;
+  z-index: 5;
   hr {
     width      : 200px;
     border-top : 1px solid #505559;
@@ -21,11 +24,13 @@
 }
 
 .promo-box {
-  margin-top       : 100px;
+  margin-top       : 200px;
   color            : #FFFFFF;
   padding          : 10px;
   background-color : rgba(0,0,0,0.6);
   border-radius    : 3px;
+  position: relative;
+  z-index: 4;
 }
 
 .banner-image {
