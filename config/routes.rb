@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   mount Sidekiq::Web => '/sidekiq'
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
 
-  root to: "pages#home"
+  root to: "pages#landing"
 
   resources :users, only: [] do
     resources :reviews, only: [:new, :create]

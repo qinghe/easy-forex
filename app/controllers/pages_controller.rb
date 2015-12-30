@@ -1,6 +1,11 @@
 class PagesController < ApplicationController
+  before_filter :disable_nav, only: [:landing, :about]
 
-  def home
+  def landing
+
+  end
+
+  def about
 
   end
 
