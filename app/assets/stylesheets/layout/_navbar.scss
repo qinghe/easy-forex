@@ -1,10 +1,10 @@
 /* -------------------------------------
  * Colors & Fonts
  * ------------------------------------- */
-$navbar-color: #FFF;
-$navbar-hover-color: #FF5400;
+$navbar-color: $orange;
+$navbar-hover-color: #505559;
 $navbar-font-family: $header-font;
-$navbar-bg: rgba(0, 0, 0, 0);
+$navbar-bg: white;
 
 /* -------------------------------------
  * Box model
@@ -36,10 +36,6 @@ $navbar-profile-border-width: 2px;
  * ------------------------------------- */
 .navbar {
   margin-bottom: 0px;
-  left: 0px;
-  right: 0px;
-  position: absolute;
-  z-index: 9;
 }
 
 .navbar-bootstrap-wagon {
