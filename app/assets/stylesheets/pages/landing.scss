@@ -1,42 +1,42 @@
 .bg-image-landing {
-  background      : url(image_path('efx-bg.jpg')) no-repeat center center fixed;
-  background-size : cover;
-  position        : relative;
-  min-height      : 100vh;
-  z-index         : 1;
+  background       : url(image_path('efx-bg.jpg')) no-repeat center center fixed;
+  background-size  : cover;
+  position         : relative;
+  min-height       : 100vh;
+  z-index          : 1;
 }
 .gradient-landing {
-  position        : absolute;
-  top             : 0;
-  bottom          : 0;
-  left            : 0;
-  right           : 0;
-  background      : linear-gradient(to left, $orange, #373B44);
-  opacity         : 0.5;
-  z-index         : 2;
+  position         : absolute;
+  top              : 0;
+  bottom           : 0;
+  left             : 0;
+  right            : 0;
+  background       : linear-gradient(to left, #373B44, #373B44);
+  opacity          : 0.3;
+  z-index          : 2;
 }
 .logo-landing {
-  width           : 50%;
-  height          : 50%;
-  z-index         : 3;
+  width            : 50%;
+  height           : 50%;
+  z-index          : 3;
 }
 .welcome-landing {
-  display         : flex;
-  justify-content : center;
-  align-items     : center;
+  display          : flex;
+  justify-content  : center;
+  align-items      : center;
 }
 .about-landing {
-  color: #FFF;
-  position: relative;
-  z-index: 4;
+  color            : #FFF;
+  position         : relative;
+  z-index          : 4;
 
 }
 .promo-box-landing {
-  margin-top       : 100px;
+  margin-top       : 50px;
   color            : #FFFFFF;
   padding          : 10px;
   background-color : rgba(0,0,0,0.6);
   border-radius    : 3px;
-  position: relative;
-  z-index: 4;
+  position         : relative;
+  z-index          : 4;
 }
